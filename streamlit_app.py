@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 @st.cache
 def load_data():
     url = 'https://github.com/shamiim611/synergix_data/upload/main'
-    return pd.read_csv(url)
+    return pd.read_csv(url,on_bad_lines='skip')
 
 data = load_data()
 
