@@ -21,14 +21,6 @@ if st.checkbox('Show raw data'):
 
 
 
-# Scatter plot between features
-st.header('Scatter Plot')
-x_axis = st.selectbox('Select X-axis', data.select_dtypes(include=['float64', 'int64']).columns)
-y_axis = st.selectbox('Select Y-axis', data.select_dtypes(include=['float64', 'int64']).columns)
-fig, ax = plt.subplots()
-sns.scatterplot(x=data[x_axis], y=data[y_axis], hue=data['Segment'], ax=ax)
-st.pyplot(fig)
-
 # Correlation heatmap
 st.header('Correlation Heatmap')
 fig, ax = plt.subplots(figsize=(10, 8))
