@@ -19,12 +19,7 @@ st.write('This Streamlit app visualizes the patterns in the Synergix dataset.')
 if st.checkbox('Show raw data'):
     st.write(data)
 
-# Distribution plots
-st.header('Distribution of Numerical Features')
-feature = st.selectbox('Select a feature to plot', data.select_dtypes(include=['float64', 'int64']).columns)
-fig, ax = plt.subplots()
-sns.histplot(data[feature], kde=True, ax=ax)
-st.pyplot(fig)
+
 
 # Scatter plot between features
 st.header('Scatter Plot')
